@@ -1,0 +1,48 @@
+// fonts
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap&subset=latin-ext");
+
+// @import library;
+@import "node_modules/include-media/dist/include-media.scss";
+@import "~flickity/css/flickity.css";
+// @import "~animate.css";
+@import "vendors/scss-lock/css-lock";
+
+//common
+@import "common/functions";
+@import "common/variables";
+@import "common/mixins";
+@import "common/helpers";
+@import "common/animations";
+@import "common/global";
+
+/** Import everything from autoload */
+@import "./autoload/**/*";
+
+// components
+@import "components/typography";
+@import "components/buttons";
+// @import "components/form";
+@import "components/container";
+@import "components/hamburger";
+@import "components/link";
+@import "components/wp-classes";
+@import "components/hr";
+@import "components/table";
+// @import "components/submenu.scss";
+
+// layouts
+@import "layouts/preloader";
+@import "layouts/header";
+@import "layouts/contact";
+@import "layouts/footer";
+@import "layouts/slider";
+// @import "layouts/video";
+@import "layouts/hero";
+@import "layouts/text-img";
+// @import "layouts/icons";
+@import "layouts/section";
+@import "layouts/content-page";
+@import "layouts/gallery";
+@import "layouts/map";
+@import "layouts/boxes-img";
+@import "layouts/store";

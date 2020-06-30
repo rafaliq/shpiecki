@@ -1,0 +1,33 @@
+.footer {
+  background-color: $primary;
+  margin: 0 auto;
+  text-align: center;
+
+  @include media("<md") {
+    text-align: center;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__copyright {
+    font-size: 15px;
+    color: $white;
+    margin: gutter(3) 0;
+  }
+
+  &__logo {
+    margin: 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: gutter(3.5);
+      width: auto;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.button {
+  color: $primary;
+  font-size: 16px;
+  font-family: $font-main;
+  padding: gutter(1) gutter(4.5);
+  display: inline-block;
+  border: 1px solid $primary;
+  border-radius: gutter(1);
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    color: $white;
+    background-color: $primary;
+    text-decoration: none;
+  }
+
+  &--light {
+    color: $white;
+    border-color: $white;
+
+    &:hover {
+      background-color: $white;
+      color: $primary;
+    }
+  }
+
+  &--contact {
+    padding: gutter(0.6) gutter(1.5);
+  }
+}

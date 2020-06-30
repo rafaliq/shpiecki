@@ -1,0 +1,36 @@
+.section {
+  padding: gutter(8) 0;
+  margin: 0 auto;
+
+  @include media("<md") {
+    padding: gutter(6) 0;
+  }
+
+  &__title {
+    margin-bottom: gutter(4);
+  }
+
+  &__desc {
+    max-width: gutter(70);
+    color: $dark;
+    margin: gutter(3) auto;
+  }
+
+  &__header {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  &--bg {
+    background: url("../images/bg.jpg");
+    background-position: top;
+  }
+
+  &--color {
+    background-color: $bg;
+  }
+
+  &--map {
+    margin-top: gutter(10);
+  }
+}

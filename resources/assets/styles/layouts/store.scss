@@ -1,0 +1,47 @@
+.store {
+  position: relative;
+  background-color: $white;
+  overflow: hidden;
+  margin: gutter(2) 0;
+
+  &__slider {
+    margin: gutter(5) 0;
+    text-align: center;
+  }
+
+  &__product {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__button {
+    margin: gutter(2.5) 0 gutter(1);
+    text-align: left;
+  }
+
+  &__info {
+    text-align: left;
+    max-width: gutter(40);
+    padding: 0 gutter(1);
+  }
+
+  &__image {
+    width: gutter(30);
+    margin: gutter(5) 0;
+
+    img {
+      height: gutter(20);
+      width: auto;
+      position: contain;
+    }
+
+    @include media("<=lg") {
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+}

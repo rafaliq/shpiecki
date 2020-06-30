@@ -1,0 +1,43 @@
+html,
+body {
+  font-family: $font-main !important;
+  font-weight: $regular;
+  color: $black;
+  //line-height: 30px;
+  font-size: 16.5px;
+  letter-spacing: 1px;
+}
+
+p {
+  margin: 0;
+}
+
+strong {
+  font-weight: $bold !important;
+}
+
+.flickity-prev-next-button {
+  background-color: $primary !important;
+
+  &:hover {
+    background-color: lighten($primary, 10) !important;
+  }
+
+  svg {
+    fill: $white;
+  }
+}
+
+.flickity-page-dots {
+  .dot {
+    border: 1px solid $primary !important;
+    background-color: $white !important;
+    width: gutter(1.5) !important;
+    height: gutter(1.5) !important;
+    opacity: 1 !important;
+  }
+
+  .is-selected {
+    background-color: $primary !important;
+  }
+}

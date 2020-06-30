@@ -1,0 +1,9 @@
+@keyframes fromleft {
+  from {
+    transform: translateX(-125%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}

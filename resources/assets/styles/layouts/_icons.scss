@@ -1,0 +1,57 @@
+.icons {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  grid-gap: gutter(3);
+  text-align: center;
+  margin-top: - gutter(23);
+  z-index: 200;
+
+  @include media("<lg") {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: gutter(1);
+    margin-top: - gutter(18);
+
+    &__item:last-child {
+      display: none;
+    }
+  }
+
+  &__item {
+    @include cssLock("padding", 360, $container, (15, 40));
+
+    background-color: $white;
+    border-radius: gutter(5) gutter(5) 0 0;
+    box-shadow: $shadow;
+
+    @include media("<md") {
+      padding-top: gutter(3);
+      padding-bottom: gutter(3);
+    }
+  }
+
+  &__img {
+    @include cssLock("height", 360, $container, (40, 70));
+
+    //height: gutter(7);
+    width: auto;
+  }
+
+  &__title {
+    @include cssLock("font-size", 360, 1700, (18, 25));
+
+    text-transform: uppercase;
+    font-weight: $bold;
+    //font-size: 25px;
+    padding: gutter(3) 0 gutter(1);
+  }
+
+  &__desc {
+    @include cssLock("font-size", 360, 1700, (12, 18));
+
+    //font-size: 18px;
+    padding: 0;
+    margin: 0;
+  }
+}

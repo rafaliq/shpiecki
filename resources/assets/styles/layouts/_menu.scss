@@ -1,0 +1,153 @@
+.menu {
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: gutter(80);
+    margin: gutter(2) auto;
+    overflow: hidden;
+  }
+
+  &__button {
+    color: $black;
+    border-radius: 5px;
+    padding: gutter(0.8) gutter(1);
+    margin: gutter(0.5);
+    font-size: 19px;
+    font-family: $font-main;
+    font-weight: $bold;
+    text-transform: uppercase;
+
+    @include media("<lg") {
+      padding: gutter(0.4) gutter(0.5);
+      font-size: 14px;
+      margin: gutter(0.8);
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &--active {
+      background-color: $primary;
+      color: $white;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  &__main {
+    position: relative;
+  }
+
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: 0;
+    transition: 1.5s;
+
+    &--active {
+      opacity: 1;
+    }
+  }
+
+  &__img {
+    padding: gutter(10) 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__content {
+    background: $white;
+    box-shadow: $shadow;
+    padding: gutter(4);
+    margin: auto;
+    transition: $transition;
+    display: none;
+
+    @include media(">lg") {
+      min-height: gutter(80);
+    }
+
+    @include media("<=md") {
+      padding: gutter(1.5);
+    }
+
+    &--active {
+      display: block;
+
+      @include media(">=lg") {
+        animation: fromleft 1.5s both;
+      }
+    }
+  }
+
+  &__columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 gutter(4);
+
+    @include media("<=lg") {
+      grid-template-columns: 1fr;
+      grid-auto-flow: row !important;
+
+      &--size {
+        .menu__row:last-of-type {
+          display: none;
+        }
+      }
+    }
+
+    &--one {
+      grid-template-columns: 1fr;
+      grid-auto-flow: row !important;
+    }
+  }
+
+  &__table {
+    margin-top: gutter(5);
+  }
+
+  &__title {
+    @include cssLock("font-size", 360, $container, (18, 22));
+
+    display: block;
+    margin-bottom: gutter(2);
+    padding: 0;
+  }
+
+  &__text {
+    margin-top: gutter(4);
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 7fr 1fr;
+    gap: gutter(1.5);
+    align-items: center;
+    border-bottom: 1px solid $gray;
+    padding: gutter(0.5) 0;
+
+    &--th {
+      border: 0;
+    }
+
+    &--space {
+      padding: gutter(2) 0;
+    }
+
+    &--col3 {
+      display: grid;
+      grid-template-columns: 4fr 1fr 1fr;
+      gap: gutter(1.5);
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,103 @@
+%text {
+  margin: 0;
+  padding: 0;
+}
+
+.headline {
+  @include cssLock("font-size", 360, $container, (32, 45));
+
+  font-family: $font-special;
+  font-weight: $bold;
+  color: $white;
+}
+
+.title {
+  @include cssLock("font-size", 360, $container, (32, 36));
+
+  font-family: $font-main;
+  font-weight: $bold;
+  color: $primary;
+  display: block;
+  position: relative;
+
+  @extend %text;
+
+  &--medium {
+    @include cssLock("font-size", 360, $container, (22, 28));
+  }
+
+  &--small {
+    @include cssLock("font-size", 360, $container, (14, 16));
+
+    font-weight: $medium;
+    letter-spacing: 0;
+  }
+
+  &--dark {
+    @include cssLock("font-size", 360, $container, (30, 34));
+
+    color: $black;
+  }
+
+  &--special {
+    &::after {
+      content: "";
+      display: block;
+      width: gutter(8);
+      margin-top: gutter(1);
+      height: 1px;
+      background-color: $primary;
+    }
+  }
+
+  &--section {
+    @include cssLock("font-size", 360, $container, (32, 45));
+
+    text-transform: none;
+    text-align: center;
+    margin: 0;
+    position: relative;
+  }
+}
+
+.text {
+  font-size: 17px;
+  font-family: $font-main;
+  font-weight: $regular;
+  margin: gutter(3.5) 0;
+  letter-spacing: 0;
+  line-height: 27px;
+
+  @extend %text;
+
+  &--small {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    line-height: gutter(1.8);
+  }
+
+  &--black {
+    color: $black;
+  }
+
+  &--white {
+    color: $white;
+  }
+
+  &--bold {
+    font-weight: $bold;
+  }
+
+  &--primary {
+    color: $primary;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--center {
+    text-align: center;
+  }
+}

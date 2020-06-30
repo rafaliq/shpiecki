@@ -1,0 +1,211 @@
+.header {
+  color: $primary;
+  font-size: 17px;
+  font-weight: $semi-bold;
+  font-family: $font-main;
+  width: 100%;
+  z-index: 900;
+  transition: $transition;
+  background: $primary;
+  position: fixed;
+  top: 0;
+  padding: gutter(0.5);
+  height: gutter(12);
+  display: flex;
+  align-items: center;
+
+  &--hide {
+    background: $primary;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__brand {
+    img {
+      @include cssLock("height", 360, $container, (50, 80));
+
+      width: auto;
+      margin: $gutter;
+    }
+  }
+
+  &__hamburger {
+    z-index: 40;
+    margin-right: gutter(2);
+
+    @include media(">=lg") {
+      display: none;
+    }
+  }
+
+  &__button {
+    margin: 0;
+    padding-left: gutter(5);
+    display: flex;
+    align-items: center;
+
+    &--mobile {
+      display: none;
+
+      @include media("<lg") {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: gutter(5) auto 0;
+
+        a {
+          margin: gutter(1);
+
+          i {
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    @include media("<1100px") {
+      display: none;
+    }
+  }
+
+  &__icon {
+    color: $white;
+    font-size: gutter(4.7);
+    margin-right: gutter(2);
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+      color: $primary;
+      text-decoration: none;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    max-width: 0;
+    height: 100vh;
+    background-color: $black;
+    z-index: 10;
+    right: - gutter(2);
+    transition: $transition;
+    overflow: auto;
+
+    @include media(">=sm") {
+      width: 70%;
+    }
+
+    @include media(">=lg") {
+      position: relative;
+      right: 0;
+      height: auto;
+      border: 0;
+      max-width: 100%;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: transparent;
+      padding: 0 15px;
+      overflow: initial;
+    }
+
+    .menu-item {
+      padding: $gutter 0;
+      position: relative;
+      color: $white;
+
+      @include media(">=lg") {
+        padding: 0 gutter(1);
+        color: $white;
+
+        // &:first-child {
+        //   padding-left: 0;
+        // }
+
+        // &:last-child {
+        //   padding-right: 0;
+        // }
+      }
+
+      &:hover {
+        color: lighten($primary, 35);
+        text-decoration: underline;
+
+        @include media(">=lg") {
+          .sub-menu {
+            display: block;
+          }
+        }
+      }
+
+      a {
+        padding: $gutter 0;
+        white-space: nowrap;
+        opacity: 0;
+        color: inherit;
+
+        @include media(">=lg") {
+          padding: gutter(4) gutter(2);
+          opacity: 1;
+
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+      }
+
+      &.current-menu-item,
+      &.current-menu-ancestor {
+        position: relative;
+        color: lighten($primary, 35);
+
+        @include media(">=lg") {
+          color: lighten($primary, 35);
+        }
+
+        .current_page_item {
+          background: $white;
+        }
+      }
+    }
+
+    &.-is-active {
+      max-width: 100vw;
+      right: 0;
+      padding: 0 15px;
+      z-index: 30;
+
+      &::before {
+        opacity: 0.8;
+      }
+
+      a {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: gutter(10) 0 0;
+    margin: 0;
+
+    @include media(">=lg") {
+      padding: 0;
+      flex-direction: row;
+    }
+  }
+}

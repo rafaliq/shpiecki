@@ -1,0 +1,49 @@
+.contact {
+  @include cssLock("font-size", 360, $container, (16, 18));
+
+  font-weight: $semi-bold;
+  color: $dark;
+  letter-spacing: 0;
+  border-top: 1px solid $bg;
+
+  @include media("<=md") {
+    padding-bottom: gutter(4);
+  }
+
+  &__block {
+    padding: gutter(10) 0 gutter(8);
+    margin: 0;
+
+    @include media("<=md") {
+      padding: gutter(5) 0;
+    }
+
+    &--right {
+      border-left: 1px solid $bg;
+      padding-left: gutter(10);
+
+      @include media("<=md") {
+        border: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include media("<=md") {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__title {
+    margin-bottom: gutter(3);
+    font-weight: $semi-bold;
+  }
+
+  &__link {
+    font-weight: $semi-bold;
+  }
+}

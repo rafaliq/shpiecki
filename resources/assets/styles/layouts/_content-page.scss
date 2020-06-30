@@ -1,0 +1,33 @@
+.page-title {
+  padding: 50px 0 29px;
+  border-top: 5px solid $gray;
+  background: $bg;
+}
+
+.content-page {
+  max-width: gutter(110);
+  //margin: gutter(5) auto;
+
+  .has-medium-font-size {
+    margin-top: gutter(3);
+    margin-bottom: gutter(2);
+  }
+
+  p {
+    letter-spacing: 0;
+    margin-bottom: gutter(2);
+  }
+
+  ol {
+    margin-top: gutter(3);
+    padding-inline-start: gutter(2);
+  }
+
+  ul,
+  ol {
+    li {
+      padding-top: gutter(0.5);
+      padding-bottom: gutter(0.5);
+    }
+  }
+}
