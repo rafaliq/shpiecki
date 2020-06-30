@@ -19,7 +19,7 @@
     }
 
     &--right {
-      border-left: 1px solid $bg;
+      //border-left: 1px solid $bg;
       padding-left: gutter(10);
 
       @include media("<=md") {

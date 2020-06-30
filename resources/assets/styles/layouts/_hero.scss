@@ -1,15 +1,14 @@
 .hero {
-  @include cssLock("height", 360, 1700, (250, 300));
+  @include cssLock("height", 360, 1700, (250, 350));
 
   width: 100%;
-  //height: gutter(35);
   position: relative;
   margin-top: gutter(10);
 
   &::after {
     content: "";
     display: block;
-    background-color: rgba(darken($primary, 30), 0.7);
+    background-color: rgba($black, 0.5);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -32,7 +31,7 @@
     margin: auto;
     text-align: center;
     transform: translate(-50%, -50%);
-    max-width: gutter(70);
+    max-width: gutter(130);
     z-index: 500;
   }
 }
