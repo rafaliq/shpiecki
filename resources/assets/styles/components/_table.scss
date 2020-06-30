@@ -1,7 +1,13 @@
 .table {
-  td {
+  td,
+  th {
     border-top: 0;
     border-bottom: 1px solid $gray;
+    padding: gutter(2) gutter(4);
     vertical-align: middle;
+  }
+
+  th {
+    color: $primary;
   }
 }
