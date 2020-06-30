@@ -6,7 +6,7 @@
       $hero = $section[0];
   @endphp
   @include('components.hero', ['data'=>$hero])
-  <div class="container content-page">
+  <div class="container content-page content-page--archive">
     @if (!have_posts())
       <div class="alert alert-warning">
         {{ __('Sorry, no results were found.', 'sage') }}

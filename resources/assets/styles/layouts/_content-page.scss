@@ -8,6 +8,10 @@
   max-width: gutter(130);
   //margin: gutter(5) auto;
 
+  &--archive {
+    margin: gutter(6) auto;
+  }
+
   .has-medium-font-size {
     margin-top: gutter(3);
     margin-bottom: gutter(2);
