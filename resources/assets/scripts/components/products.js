@@ -5,7 +5,7 @@ const products = {
   init() {
     this.products = new Flickity('.products-carousel', {
       prevNextButtons: true,
-      groupCells: 2,
+      groupCells: true,
       pageDots: true,
       wrapAround: true,
       autoPlay: 4000,
