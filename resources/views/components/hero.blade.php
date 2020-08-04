@@ -3,7 +3,11 @@
     <div class="container">
       <h1 class="hero__title">
         <span class="headline">
-          {{ $data['title'] }}
+          @if($category) 
+            {{ single_cat_title() }}
+          @else
+            {{ $data['title'] }}
+          @endif
         </span>
       </h1>
     </div>

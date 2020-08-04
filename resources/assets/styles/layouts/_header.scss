@@ -156,12 +156,12 @@
         color: inherit;
 
         @include media(">=lg") {
-          padding: gutter(4) gutter(2);
+          padding: gutter(4) gutter(0.9);
           opacity: 1;
 
-          &:last-child {
-            padding-right: 0;
-          }
+          // &:last-child {
+          //   padding-right: 0;
+          // }
         }
       }
 

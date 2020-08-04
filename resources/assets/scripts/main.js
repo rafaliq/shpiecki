@@ -12,6 +12,7 @@ import products from './components/products';
 import hamburger from './components/hamburger';
 import header from './components/header';
 //import menu from './components/menu';
+import submenu from './components/submenu';
 import preloader from './components/preloader';
 import gmap from './components/gmap';
 import wp_block_gallery from './components/wp-block-gallery';
@@ -30,6 +31,7 @@ const routes = new Router({
 jQuery(document).ready(() => {
   routes.loadEvents();
   header.init();
+  submenu.init();
   wp_block_gallery.init();
   preloader.init();
   hamburger.init();

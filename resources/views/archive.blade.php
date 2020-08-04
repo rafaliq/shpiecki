@@ -5,7 +5,7 @@
       $section = get_field('components', 125);
       $hero = $section[0];
   @endphp
-  @include('components.hero', ['data'=>$hero])
+  @include('components.hero', ['data'=>$hero, 'category' => true])
   <div class="container content-page content-page--archive">
     @if (!have_posts())
       <div class="alert alert-warning">
