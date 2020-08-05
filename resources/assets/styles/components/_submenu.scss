@@ -19,6 +19,10 @@
     background: none;
   }
 
+  .current_page_item {
+    background-color: lighten($primary, 4) !important;
+  }
+
   .menu-item {
     margin: 0;
     padding: 0 !important;
