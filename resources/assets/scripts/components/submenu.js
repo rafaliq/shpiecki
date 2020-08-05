@@ -1,5 +1,6 @@
+
 const CONFIG = {
-  TRIGGER: '.menu-item-has-children a',
+  TRIGGER: '.menu-item-has-children > a',
   ELEM: '.sub-menu',
   HREF: '.sub-menu li',
   CLASS: 'd-block',
@@ -9,15 +10,12 @@ const CONFIG = {
 const submenu = {
   init() {
     const { TRIGGER, ELEM, CLASS, HREF, ACTIVE } = CONFIG;
-    this.$trigger = document.querySelector(TRIGGER);
-    this.$elem = document.querySelector(ELEM);
+    this.$trigger = document.querySelectorAll(TRIGGER);
+    this.$elem = document.querySelectorAll(ELEM);
     this.$href = document.querySelectorAll(HREF);
     this.$class = CLASS;
-    this.$active = ACTIVE
-    this.active(ACTIVE);
-    if(this.$trigger) {
-      this.addEvent();
-    }
+    this.$active = ACTIVE;
+    this.addEvent();
   },
 
   active(ACTIVE) {
@@ -27,10 +25,18 @@ const submenu = {
   },
 
   addEvent() {
-    this.$trigger.addEventListener('click', (event) => {
-      event.preventDefault();
-      this.$elem.classList.toggle(this.$class);
-    });
+    for(const item of this.$trigger) {
+      item.addEventListener('click', (event) => {
+        let menu = event.target.nextElementSibling;
+        event.preventDefault();
+        for(const el of this.$elem) {
+          if(el != menu) {
+            el.classList.remove(this.$class);
+          }
+        }
+        menu.classList.toggle(this.$class);
+      });
+    }
   },
 };
 
