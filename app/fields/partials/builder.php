@@ -17,6 +17,7 @@ $builder
             ->addLayout(get_field_partial('components.boxes-img'))
             ->addLayout(get_field_partial('components.shops'))
             ->addLayout(get_field_partial('components.store'))
+            ->addLayout(get_field_partial('components.news'))
             ->addLayout('content', ['label' => 'Treść']);
 
 return $builder;
