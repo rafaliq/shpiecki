@@ -116,7 +116,7 @@ function image($id, $size, $class)
 
 function my_acf_init()
 {
-    acf_update_setting('google_api_key', 'AIzaSyApJWmNRy9KlH76AbS4UrkXPebJhO4Ach8');
+    acf_update_setting('google_api_key', 'AIzaSyDoD_l7Fw9zziImoBeFDTKOXSa9vSHGDMs');
 }
 
 add_action('acf/init', 'my_acf_init');

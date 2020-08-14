@@ -25,7 +25,7 @@ const Gmap = {
         const pins = this.pins;
 
         loadGoogleMapsApi(
-            { 'key': 'AIzaSyApJWmNRy9KlH76AbS4UrkXPebJhO4Ach8', }
+            { 'key': 'AIzaSyDoD_l7Fw9zziImoBeFDTKOXSa9vSHGDMs', }
         ).then(function (googleMaps) {
 
             let map;
