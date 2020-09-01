@@ -16,6 +16,7 @@ import submenu from './components/submenu';
 import preloader from './components/preloader';
 import gmap from './components/gmap';
 import wp_block_gallery from './components/wp-block-gallery';
+import table_img from './components/table-img';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -33,6 +34,7 @@ jQuery(document).ready(() => {
   header.init();
   submenu.init();
   wp_block_gallery.init();
+  table_img.init();
   preloader.init();
   hamburger.init();
   gmap.init();

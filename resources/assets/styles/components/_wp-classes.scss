@@ -58,3 +58,12 @@
 // .main {
 //   min-height: calc(100vh - 100px);
 // }
+
+.wp-block-table img {
+  cursor: pointer;
+  transition: 0.2ms;
+
+  &:hover {
+    filter: brightness(80%);
+  }
+}
